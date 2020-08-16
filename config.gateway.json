@@ -1,0 +1,42 @@
+{
+    "load-balance": {
+        "group": {
+            "wan_failover": {
+                "interface": {
+                    "eth3": {
+                        "failover-only": "''",
+                        "route-test": {
+                            "initial-delay": "20",
+                            "interval": "10",
+                            "count": {
+                                "failure": "6",
+                                "success": "3"
+                            },
+                            "type": {
+                                "ping": {
+                                    "target": "8.8.8.8"
+                                }
+                            }
+                        }
+                    },
+                    "eth2": {
+                        "route-test": {
+                            "initial-delay": "20",
+                            "interval": "10",
+                            "count": {
+                                "failure": "6",
+                                "success": "3"
+                            },
+                            "type": {
+                                "ping": {
+                                    "target": "8.8.8.8"
+                                }
+                            }
+                        }
+                    }
+                },
+                "transition-script": "/config/scripts/wan-event-vpn-reset.sh"
+            }
+        }
+    }
+}
