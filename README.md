@@ -11,7 +11,8 @@ Be sure to set the execute bit when you install wan-event-vpn-reset.sh:
 ```bash
 chmod +x /config/scripts/wan-event-vpn-reset.sh
 ```
-For information on how to use a config.gateway.json file, browser to Ubiquiti's help article [here](https://help.ui.com/hc/en-us/articles/215458888-UniFi-How-to-further-customize-USG-configuration-with-config-gateway-json).
+
+For information on how to use a config.gateway.json file, browse to Ubiquiti's help article [here](https://help.ui.com/hc/en-us/articles/215458888-UniFi-How-to-further-customize-USG-configuration-with-config-gateway-json).
 
 After you install the config.gateway.json to your UniFi controller's site directory, be sure to change ownership, so that your backups continue working:
 
