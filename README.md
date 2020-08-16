@@ -6,6 +6,8 @@ Usually we just manually restart the USGs at either end of the VPN, but during w
 
 We created wan-event-vpn-reset.sh by reusing Ubiquiti's /config/scripts/wan-event-report.sh and adding the commands required to get the site to site VPN working again. The script is called whenever a fail over event occurs. /config is preserved when upgrading EdgeOS and the config.gateway.json ensures the configuration is provisioned after reboots etc.
 
+>***NOTE: be sure to change the interfaces in the config.gateway.json file if you're deploying the workaround to a USG3***
+
 Be sure to set the execute bit when you install wan-event-vpn-reset.sh:
 
 ```bash
