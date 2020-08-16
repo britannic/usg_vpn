@@ -4,7 +4,7 @@ Often after multiple WAN fail overs, our client site to site VPNs will often rec
 
 Usually we just manually restart the USGs at either end of the VPN, but during working hours this is disruptive. Also, the fail-over detection settings were too sensitive for our use case, so the config.gateway.json file contains our preferred parameters.
 
-We created wan-event-vpn-reset.sh reusing /config/scripts/wan-event-report.sh and adding the commands required to get the site to site VPN working again. The script is called whenever a fail over event occurs. /config is preserved when upgrading EdgeOS and the config.gateway.json ensures the configuration is provisioned after reboots etc.
+We created wan-event-vpn-reset.sh by reusing Ubiquiti's /config/scripts/wan-event-report.sh and adding the commands required to get the site to site VPN working again. The script is called whenever a fail over event occurs. /config is preserved when upgrading EdgeOS and the config.gateway.json ensures the configuration is provisioned after reboots etc.
 
 Be sure to set the execute bit when you install wan-event-vpn-reset.sh:
 
