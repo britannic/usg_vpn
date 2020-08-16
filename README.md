@@ -1,6 +1,6 @@
 # **Ubiquiti USG Pro Fail Over or Load Balance VPN Recovery Workaround**
 
-Often after multiple WAN fail overs, our client site to site VPNs will often reconnect with one way traffic only, causing loss of service over the link.
+Often after multiple WAN fail overs, our client site to site VPNs will only reconnect with one way traffic only, causing loss of service over the link.
 
 Usually we just manually restart the USGs at either end of the VPN, but during working hours this is disruptive. Also, the fail-over detection settings were too sensitive for our use case, so the config.gateway.json file contains our preferred parameters.
 
